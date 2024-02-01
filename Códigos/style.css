@@ -1,0 +1,122 @@
+/*  Importação Fonts (GoogleFonts) */
+
+
+/* Estilos gerais (Todo projeto) */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #1f1517 ;
+    color: #ffff;
+}
+
+html {
+    font-family: inter, sans-serif;
+    font-weight: 500,
+}
+
+a {
+    text-decoration: none; /* Remove a decoração de texto, como sublinhado, do elemento */
+
+}
+
+ul {
+    list-style-type: none; /*Remove os marcadores de lista (bolinhas) de um elemento da lista*/
+
+}
+
+/* ---------------------------- */
+/* Header */
+
+nav {
+    max-width: 1120px; /* Define a largura maxima do elemento em 1120 pixels*/
+    margin: auto; /* Centraliza o elemnto horizontalmente na tela*/
+
+    padding: 1.5rem 10 rem;
+
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title {
+    font-family: 'Teko', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+/* Imagem do Hamburguer (Responsividade) */
+
+.menu-icon {
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    color: #fff2e780;
+    margin-top: 9px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.menu a:hover {
+    color: #fff2e7;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.github:hover {
+    color: #a45a49;
+}
+
+/*---------------------*/
+/* Responsividade (Telas menores de 768px)*/
+
+@media screen and (max-width: 768) {
+    /*header*/
+    nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5;
+        z-index: 9;
+    }
+    nav ul li {
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .menu {
+        margin-left: 0px;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        margin-right: -70px;
+    }
+    .github {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+    .title {
+        margin-left: -100px;
+    }
+}
